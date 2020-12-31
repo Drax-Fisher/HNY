@@ -234,15 +234,18 @@ body{
 	/*display: inline-block;*/
 	position: absolute;
 	bottom: 12%;
-	left: 7%;
-	display: flex;
+	left: 6%;
+	display: block;
 	width: 88%;
-	align-items: flex-end;
+	text-align: center;
+	/*align-items: flex-end;*/
 }
 #chicks img{
 	transform: rotateX(90deg);
 	transform-origin: 50% 100%;
 	display: inline-block;
+	width: 10%;
+	height: auto;
 	animation: chick 1s calc(8.5s * var(--k)) both;
 }
 @keyframes chick{
@@ -251,31 +254,37 @@ body{
 	}
 }
 #A{
-	height: 40vh;
-	width: auto;
+	/*height: 40vh;*/
+	width: 13% !important;
+	/*width: auto;*/
 }
 #B{
-	height: 35vh;
-	width: auto;
+	width: 13% !important; 
+	/*height: 35vh;*/
+	/*width: auto;*/
 }
 #C{
 	margin-left: 2%;
-	height: 35vh;
-	width: auto;
+	/*height: 35vh;*/
+	/*width: auto;*/
 }
 #D{
-	margin-left: 23%;
-	height: 60vh;
-	width: auto; 
+	/*height: 55vh !important;*/
+	width: 15% !important;
+	margin-left: 21%;
+	/*height: 60vh;*/
+	/*width: auto; */
 }
 #E{
-	height: 45vh;
-	width: auto;
+	/*height: 45vh !important;*/
+	width: 8% !important;
+	/*height: 45vh;*/
+	/*width: auto;*/
 }
 #F{
 	margin-left: 2%;
-	height: 40vh;
-	width: auto;
+	/*height: 40vh;*/
+	/*width: auto;*/
 } 
 @keyframes ball{
 	0%{
