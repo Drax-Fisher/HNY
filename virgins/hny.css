@@ -1,0 +1,355 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+html{
+	height: 100%;
+}
+#war{
+	display: none;
+}
+body{
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: flex;
+	height: 100%;
+	background-attachment: fixed;
+	background: linear-gradient(155deg,black,grey,violet,indigo,blue,green,yellow,orange,red,orange,yellow,green,indigo,violet);
+	background-position: 0% 1%;
+	background-size: 1000% 1000%;
+	animation: bg 5s;
+	animation-fill-mode: forwards;
+	backface-visibility: hidden;
+	animation-delay: 3s;
+}
+.contain{
+	border-radius: 20px;
+	background-color: transparent;
+	position: absolute;
+	margin: 0;
+	display: inline-block;
+	animation: hover 1.5s;
+	animation-fill-mode: both;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-delay: calc(8s * var(--j));
+}
+@keyframes hover{
+	0%{
+		box-shadow: 0px 0px 0px black;
+	}
+	50%{
+		/*box-shadow: 0px 0px 30px black;*/
+	}
+	100%{
+		box-shadow: 0px 0px 50px red;
+	}
+}
+#out{
+	/*background-color: white;*/
+	left: 2%;
+	top: 4%;
+	width: 96%;
+	height: 92%
+}
+#mid{
+	left: 4%;
+	top: 8%;
+	width: 92%;
+	height: 84%;
+	border-radius: 40px;
+	/*background-color: black;*/
+}
+#in{
+	left: 6%;
+	top: 12%;
+	width: 88%;
+	height: 76%;
+	border-radius: 60px;
+	/*background-color: red;*/
+}
+@keyframes bg{
+	100%{
+		background-position: 100% 100%;
+	}
+}
+#out_year{
+	z-index: 10;
+	display: inline-block;
+	position: absolute;
+	width: 100vw;
+	height: auto;
+	top: 35%;
+	text-align: center;
+	animation: pos 6s forwards;
+	animation-delay: 3s;
+}
+#year{
+	position: relative;
+	width: 20vw;
+	display: inline-block;
+}
+@keyframes pos{
+	83%{
+		top: 35%;
+	}
+	100%{
+		top: 50%;
+	}
+}
+#year div{
+	position: absolute;
+	/*border-radius: 30px; */
+	display: flex;
+	animation: size 6s forwards;
+	animation-delay: 3s;
+}
+@keyframes size{
+	83%{
+		transform: scale(2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+#last span, #current span{
+	color: white;
+	font-size: 10vw;
+	text-shadow: 20px 2px 20px black;
+}
+#zero{
+	display: inline-block;
+	animation-name: zro;
+	/*animation-delay: 0s;*/
+	animation-fill-mode: forwards;
+	animation-duration: 5s;
+	animation-delay: 3s;
+	/*animation-iteration-count: infinite;*/
+}
+#one{
+	opacity: 0;
+	display: inline-block;
+	animation-name: one;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+	animation-duration: 5s;
+}
+@keyframes zro{
+	0%{
+		transform: rotateX(0deg) scaleX(1);
+		opacity: 1;
+	}
+	40%{
+		opacity: 1;
+	}
+	100%{
+		transform: rotateX(3600deg) scaleX(0.2);
+		opacity: 0;
+	}
+}
+@keyframes one{
+	0%{
+		transform: rotateX(0deg) scaleX(0.2);
+		opacity: 0;
+	}
+	40%{
+		opacity: 0;
+	}
+	100%{
+		transform: rotateX(3600deg) scaleX(1);
+		opacity: 1;
+	}
+}
+#hny{
+		z-index: 10;
+		/*display: block;*/
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		/*left: 12%;*/
+		top: 20%;
+		color: black;
+}
+#hny div{
+	display: inline-block;
+}
+#hny span{
+	display: inline-block;
+	transform: rotateX(90deg);
+	transform-origin: 50% 85%;
+	animation: rot 0.3s calc(8.5s * var(--i)) forwards, big 0.8s calc(8.5s * var(--i)) forwards infinite alternate;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 8vw;
+	text-shadow: 20px 2px 20px black;
+}
+@keyframes rot{
+	100%{
+		transform: rotateX(0deg);
+	}
+}
+@keyframes big{
+	100%{
+		transform: scale(1.2) translateY(-30px);
+		color: brown;
+	}
+}
+#ball{
+	z-index: 5;
+	position: absolute;
+	/*width: 100%;*/
+	display: inline-block;
+	bottom: 12%;
+	left: 10%;
+	/*width: 9%;*/
+	/*height: 9vw;*/
+	animation: align 8s forwards infinite alternate, rot 1s 8.5s forwards;
+	animation-delay: 10s;
+	transform: rotateX(90deg);
+	transform-origin: 50% 100%;
+	animation-timing-function: ease-in-out;
+	box-shadow: 5px 0px 20px black;
+	border-radius: 50%;
+}
+@keyframes align{
+	100%{
+		left: 80%;
+	}
+}
+#ball span{
+	font-family: 'Dancing Script', cursive;
+	background-color: black;
+	display: inline-block;
+	border-radius: 50%;
+	height: 14vw;
+	width: 14vw;
+	text-align: center;
+	color: brown;
+	text-shadow: 5px 5px 5px black;
+	line-height: 220%;
+	font-size: 5.5vw;
+	animation: ball 8s ease-in-out forwards infinite alternate;
+	animation-delay: 8.5s;
+}
+#chicks{
+	/*display: inline-block;*/
+	position: absolute;
+	bottom: 12%;
+	left: 7%;
+	display: flex;
+	align-items: flex-end;
+}
+#chicks img{
+	transform: rotateX(90deg);
+	transform-origin: 50% 100%;
+	display: inline-block;
+	animation: chick 1s calc(8.5s * var(--k)) both;
+}
+@keyframes chick{
+	100%{
+		transform: rotateX(0deg);
+	}
+}
+#A{
+	height: 40vh;
+	width: auto;
+}
+#B{
+	height: 35vh;
+	width: auto;
+}
+#C{
+	margin-left: 5%;
+	height: 35vh;
+	width: auto;
+}
+#D{
+	margin-left: 40%;
+	height: 60vh;
+	width: auto; 
+}
+#E{
+	height: 45vh;
+	width: auto;
+}
+#F{
+	margin-left: 5%;
+	height: 40vh;
+	width: auto;
+} 
+@keyframes ball{
+	0%{
+		transform: rotate(-30deg);
+	}
+	100%{
+		transform: rotate(3630deg); 
+	}
+}
+@media only screen and (max-width: 600px){
+	.space{
+		display: none !important;
+	}
+	#hny{
+		top: 15%;
+	}
+	#hny div{
+		display: block;
+	}	
+	#hny span{
+		font-size: 16vw;
+		color: brown;
+		animation: rot 0.3s calc(8.5s * var(--i)) forwards, big 2s calc(8.5s * var(--i)) forwards infinite;
+	}
+	@keyframes big{
+
+		25%{
+			transform: scale(1.5);
+			color: pink;
+		}
+		50%{
+			transform: scale(1);
+			color: brown;
+		}
+		100%{
+			transform: scale(1);
+			color: brown;
+		}
+	}
+	#year{
+		width: 44vw;
+	}
+	#last span, #current span{
+		font-size: 20vw;
+	}
+	@keyframes pos{
+		83%{
+			top: 35%;
+		}
+		100%{
+			top: 60%;
+		}	
+	}
+	#ball span{
+		width: 30vw;
+		height: 30vw;
+		font-size: 12vw;
+	}
+	@keyframes align{
+		100%{
+		left: 60%;
+		}
+	}
+	#chicks{
+		/*display: none;*/
+	}
+	#war{
+		position: absolute;
+		bottom: 0%;
+		display: block;
+		width: 100%;
+		text-align: center;
+		border-radius: 30px;
+		background-image: linear-gradient(yellow,orange);
+		color:black;
+		font-size: 2em;
+	}
+}
