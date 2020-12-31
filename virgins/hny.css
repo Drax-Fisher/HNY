@@ -339,7 +339,7 @@ body{
 		}
 	}
 	#chicks{
-		/*display: none;*/
+		display: none;
 	}
 	#war{
 		position: absolute;
