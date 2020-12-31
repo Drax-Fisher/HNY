@@ -1,11 +1,6 @@
-@import "compass/css3";
 
-@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
 html{
 	height: 100%;
-}
-#war{
-	display: none;
 }
 body{
 	padding: 0;
@@ -74,7 +69,6 @@ body{
 	}
 }
 #out_year{
-	z-index: 10;
 	display: inline-block;
 	position: absolute;
 	width: 100vw;
@@ -85,6 +79,7 @@ body{
 	animation-delay: 3s;
 }
 #year{
+	z-index: 10;
 	position: relative;
 	width: 20vw;
 	display: inline-block;
@@ -161,7 +156,6 @@ body{
 	}
 }
 #hny{
-		z-index: 10;
 		/*display: block;*/
 		width: 100%;
 		text-align: center;
@@ -194,7 +188,6 @@ body{
 	}
 }
 #ball{
-	z-index: 5;
 	position: absolute;
 	/*width: 100%;*/
 	display: inline-block;
@@ -225,67 +218,11 @@ body{
 	text-align: center;
 	color: brown;
 	text-shadow: 5px 5px 5px black;
-	line-height: 220%;
-	font-size: 5.5vw;
+	/*line-height: 300%;*/
+	font-size: 9.6vw;
 	animation: ball 8s ease-in-out forwards infinite alternate;
 	animation-delay: 8.5s;
 }
-#chicks{
-	/*display: inline-block;*/
-	position: absolute;
-	bottom: 12%;
-	left: 6%;
-	display: block;
-	width: 88%;
-	text-align: center;
-	/*align-items: flex-end;*/
-}
-#chicks img{
-	transform: rotateX(90deg);
-	transform-origin: 50% 100%;
-	display: inline-block;
-	width: 10%;
-	height: auto;
-	animation: chick 1s calc(8.5s * var(--k)) both;
-}
-@keyframes chick{
-	100%{
-		transform: rotateX(0deg);
-	}
-}
-#A{
-	/*height: 40vh;*/
-	width: 13% !important;
-	/*width: auto;*/
-}
-#B{
-	width: 13% !important; 
-	/*height: 35vh;*/
-	/*width: auto;*/
-}
-#C{
-	margin-left: 2%;
-	/*height: 35vh;*/
-	/*width: auto;*/
-}
-#D{
-	/*height: 55vh !important;*/
-	width: 15% !important;
-	margin-left: 21%;
-	/*height: 60vh;*/
-	/*width: auto; */
-}
-#E{
-	/*height: 45vh !important;*/
-	width: 8% !important;
-	/*height: 45vh;*/
-	/*width: auto;*/
-}
-#F{
-	margin-left: 2%;
-	/*height: 40vh;*/
-	/*width: auto;*/
-} 
 @keyframes ball{
 	0%{
 		transform: rotate(-30deg);
@@ -325,7 +262,7 @@ body{
 		}
 	}
 	#year{
-		width: 44vw;
+		width: 42vw;
 	}
 	#last span, #current span{
 		font-size: 20vw;
@@ -341,25 +278,11 @@ body{
 	#ball span{
 		width: 30vw;
 		height: 30vw;
-		font-size: 12vw;
+		font-size: 20.6vw;
 	}
 	@keyframes align{
 		100%{
 		left: 60%;
 		}
-	}
-	#chicks{
-		display: none;
-	}
-	#war{
-		position: absolute;
-		bottom: 0%;
-		display: block;
-		width: 100%;
-		text-align: center;
-		border-radius: 30px;
-		background-image: linear-gradient(yellow,orange);
-		color:black;
-		font-size: 2em;
 	}
 }
