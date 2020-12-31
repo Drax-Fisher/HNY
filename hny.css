@@ -163,7 +163,7 @@ body{
 		position: absolute;
 		/*left: 12%;*/
 		top: 20%;
-		color: brown;
+		color: black;
 }
 #hny div{
 	display: inline-block;
@@ -172,8 +172,7 @@ body{
 	display: inline-block;
 	transform: rotateX(90deg);
 	transform-origin: 50% 85%;
-	animation: rot 0.3s forwards, big 0.8s forwards infinite alternate;
-	animation-delay: calc(8.5s * var(--i));
+	animation: rot 0.3s calc(8.5s * var(--i)) forwards, big 0.8s calc(8.5s * var(--i)) forwards infinite alternate;
 	font-family: 'Permanent Marker', cursive;
 	font-size: 8vw;
 	text-shadow: 20px 2px 20px black;
@@ -186,24 +185,81 @@ body{
 @keyframes big{
 	100%{
 		transform: scale(1.2) translateY(-30px);
-		color: transparent;
+		color: brown;
+	}
+}
+#ball{
+	position: absolute;
+	/*width: 100%;*/
+	display: inline-block;
+	bottom: 12%;
+	left: 10%;
+	/*width: 9%;*/
+	/*height: 9vw;*/
+	animation: align 8s forwards infinite alternate, rot 1s 8.5s forwards;
+	animation-delay: 8.5s;
+	transform: rotateX(90deg);
+	transform-origin: 50% 100%;
+	animation-timing-function: ease-in-out;
+	box-shadow: 5px 0px 20px black;
+	border-radius: 50%;
+}
+@keyframes align{
+	100%{
+		left: 80%;
+	}
+}
+#ball span{
+	font-family: 'Dancing Script', cursive;
+	background-color: black;
+	display: inline-block;
+	border-radius: 50%;
+	height: 9vw;
+	width: 9vw;
+	color: brown;
+	text-shadow: 5px 5px 5px black;
+	line-height: 110%;
+	font-size: 6.5vw;
+	animation: ball 8s ease-in-out forwards infinite alternate;
+	animation-delay: 8.5s;
+}
+@keyframes ball{
+	0%{
+		transform: rotate(-30deg);
+	}
+	100%{
+		transform: rotate(3630deg); 
 	}
 }
 @media only screen and (max-width: 600px){
+	.space{
+		display: none !important;
+	}
 	#hny div{
 		display: block;
 	}	
 	#hny span{
 		font-size: 16vw;
+		color: brown;
+		animation: rot 0.3s calc(8.5s * var(--i)) forwards, big 2s calc(8.5s * var(--i)) forwards infinite;
 	}
 	@keyframes big{
+
+		25%{
+			transform: scale(1.5);
+			color: pink;
+		}
+		50%{
+			transform: scale(1);
+			color: brown;
+		}
 		100%{
-			transform: scale(1.2) translateY(-30px);
-			/*color: transparent;*/
+			transform: scale(1);
+			color: brown;
 		}
 	}
 	#year{
-		width: 44vw;
+		width: 40vw;
 	}
 	#last span, #current span{
 		font-size: 20vw;
@@ -215,5 +271,15 @@ body{
 		100%{
 			top: 60%;
 		}	
+	}
+	#ball span{
+		width: 20vw;
+		height: 20vw;
+		font-size: 14vw;
+	}
+	@keyframes align{
+		100%{
+		left: 70%;
+		}
 	}
 }
