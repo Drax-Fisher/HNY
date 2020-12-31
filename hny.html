@@ -4,13 +4,14 @@
 <head>
 	<title>2021</title>
 	<link rel="stylesheet" type="text/css" href="hny.css">
+	<script type="text/javascript" src="hny.js"></script>
 	<meta name="viewport" content="width=device-width" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onmousemove="rotate(event)">
 	<div class="contain" id="out" style="--j:1"></div>
 	<div class="contain" id="mid" style="--j:1.05"></div>
 	<div class="contain" id="in" style="--j:1.1"></div>
@@ -38,13 +39,13 @@
 		<span style="--i:1.02">P</span>
 		<span style="--i:1.03">P</span>
 		<span style="--i:1.04">Y</span>
-		<span style="--i:1.05">&nbsp;</span>		
+		<span class="space" style="--i:1.05">&nbsp;</span>		
 	</div>
 	<div id="new">
 		<span style="--i:1.06">N</span>
 		<span style="--i:1.07">E</span>
 		<span style="--i:1.08">W</span>
-		<span style="--i:1.09">&nbsp;</span>
+		<span class="space" style="--i:1.09">&nbsp;</span>
 	</div>
 	<div id="yr">
 		<span style="--i:1.10">Y</span>
@@ -52,6 +53,9 @@
 		<span style="--i:1.12">A</span>
 		<span style="--i:1.13">R</span>
 	</div>
+</div>
+<div id="ball">
+	<span>issa</span>
 </div>
 </body>
 </html>
