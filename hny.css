@@ -218,7 +218,7 @@ body{
 	text-align: center;
 	color: brown;
 	text-shadow: 5px 5px 5px black;
-	/*line-height: 300%;*/
+	line-height: 150%;
 	font-size: 9.6vw;
 	animation: ball 8s ease-in-out forwards infinite alternate;
 	animation-delay: 8.5s;
